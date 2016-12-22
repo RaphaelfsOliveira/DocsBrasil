@@ -20,9 +20,10 @@ def valida_renavam(num_rnv):
         soma += int(reverse_rnv[n])*(n+2)
         #print("soma_total: ",soma)
         
-    soma += int(reverse_rnv[8])*(n+2)
-    soma += int(reverse_rnv[9])*(n+2)
-    #print("soma_total: ",soma)
+    soma += int(reverse_rnv[8])*2
+    #print("soma_total: ",reverse_rnv[8],soma)
+    soma += int(reverse_rnv[9])*3
+    #print("soma_total: ",reverse_rnv[9],soma)
     
     mod11 = (soma * 10) % 11
     #print("test_mod11: ",mod11)
@@ -36,6 +37,6 @@ def valida_renavam(num_rnv):
         return True
     else:
         return False
-    
+
                 
-print(valida_renavam(639884962))
+print(valida_renavam(86013721868))

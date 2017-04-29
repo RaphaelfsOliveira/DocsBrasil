@@ -1,9 +1,14 @@
 def valida_renavam(num_rnv):
     #print(num_rnv)
     num_rnv = str(num_rnv)
-    
-    if not len(num_rnv) == 11 and not len(num_rnv) == 9:
-        return 'formato de numero renavam invalido, digite novamente'
+
+    if num_rnv.isdigit():
+        if len(num_rnv) == 11 or len(num_rnv) == 9:
+            print('formatação OK')
+        else:
+            return 'Digite somente os 9 ou 11 Digitos, sem pontos ou traços'
+    else:
+        return 'A numeração do Renavam só contém numeros, certifique-se por favor'
     
     if len(num_rnv) < 11:
         #print(len(num_rnv))
@@ -41,5 +46,9 @@ def valida_renavam(num_rnv):
     else:
         return False
 
-                
+#testes                
 print(valida_renavam(86013721868))
+print(valida_renavam(47979033272))
+print(valida_renavam(0))
+print(valida_renavam('sdbasdbsa'))
+print(valida_renavam(1721868))

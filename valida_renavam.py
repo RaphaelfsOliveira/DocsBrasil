@@ -2,6 +2,9 @@ def valida_renavam(num_rnv):
     #print(num_rnv)
     num_rnv = str(num_rnv)
     
+    if not len(num_rnv) == 11 and not len(num_rnv) == 9:
+        return 'formato de numero renavam invalido, digite novamente'
+    
     if len(num_rnv) < 11:
         #print(len(num_rnv))
         num_rnv = "00" + num_rnv[:len(num_rnv)]
